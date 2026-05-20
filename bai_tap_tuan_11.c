@@ -24,6 +24,7 @@ void createLeftSkewedArray(int a[], int n) {
     }
 }
 
+<<<<<<< HEAD
 void createRightSkewedArray(int a[], int n) {
     int index = 1;
 
@@ -46,6 +47,8 @@ void createZigzagArray(int a[], int n) {
     }
 }
 
+=======
+>>>>>>> f11dc214f58898450cf3585248bbc1378a2c6de2
 void printArrayTree(int a[]) {
     printf("Vi tri\tGia tri\n");
 
@@ -99,6 +102,7 @@ Node* createLeftSkewedLinked(int n) {
     return root;
 }
 
+<<<<<<< HEAD
 Node* createRightSkewedLinked(int n) {
     if (n <= 0)
         return NULL;
@@ -134,6 +138,8 @@ Node* createZigzagLinked(int n) {
     return root;
 }
 
+=======
+>>>>>>> f11dc214f58898450cf3585248bbc1378a2c6de2
 void preorder(Node* root) {
     if (root == NULL)
         return;
@@ -163,6 +169,7 @@ int main() {
     scanf("%d", &n);
 
     printf("\nCAY DAY DU - TUAN TU\n");
+<<<<<<< HEAD
     initArray(a);
     createFullTreeArray(a, n);
     printArrayTree(a);
@@ -204,6 +211,37 @@ int main() {
     root = createZigzagLinked(n);
     printf("Duyet NLR: ");
     preorder(root);
+=======
+
+    initArray(a);
+    createFullTreeArray(a, n);
+
+    printArrayTree(a);
+
+    printf("\nCAY LECH TRAI - TUAN TU\n");
+
+    initArray(a);
+    createLeftSkewedArray(a, n);
+
+    printArrayTree(a);
+
+    printf("\nCAY DAY DU - MOC NOI\n");
+
+    root = createFullTreeLinked(1, n);
+
+    printf("Duyet NLR: ");
+    preorder(root);
+
+    freeTree(root);
+
+    printf("\n\nCAY LECH TRAI - MOC NOI\n");
+
+    root = createLeftSkewedLinked(n);
+
+    printf("Duyet NLR: ");
+    preorder(root);
+
+>>>>>>> f11dc214f58898450cf3585248bbc1378a2c6de2
     freeTree(root);
 
     return 0;
